@@ -11,7 +11,7 @@ userSearchBtn.onclick = function () {
   fetch(`https://api.github.com/users/${userName}/repos`)
     .then((data) => {
       if (data.ok) return data.json();
-      throw new Error("No Valid URL");
+      else throw new Error();
     })
     .then((userDetails) => {
       fetch(`https://api.github.com/users/${userName}`)
